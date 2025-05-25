@@ -1,0 +1,99 @@
+WHITEPAPER EURC
+EURO COIN (EURC) WHITEPAPER
+Stability Meets Philanthropy: A Dual-Token Ecosystem for Global Impact
+
+1. Executive Summary
+EURO COIN (EURC) is a stablecoin pegged 1:1 to the Euro, designed to bring financial stability and liquidity to the Samar Coin (SMR) ecosystem. By anchoring healthcare-focused crypto initiatives to a stable asset, EURC ensures:
+
+Price Stability: Protection against crypto volatility for donors and partners.
+
+Liquidity Backbone: Facilitating seamless transactions within Samar’s healthcare funding network.
+
+Trust & Transparency: Fully audited, non-mintable supply with blockchain-tracked reserves.
+
+Mission: To accelerate Samar Coin’s vision of universal healthcare access by providing a reliable financial infrastructure.
+
+2. Tokenomics
+Parameter	Value
+Token Name	EURO COIN
+Symbol	EURC
+Blockchain	BEP-20 (Binance Smart Chain)
+Peg	1 EURC = 1 Euro (Soft Peg)
+Total Supply	100,000,000,000 EURC (100B)
+Contract	0xc9724ace...75FC9F8
+Supply Allocation
+90% Liquidity Pools: Locked on PancakeSwap (EURC/SMR) to support Samar’s growth.
+
+5% Strategic Reserves: For future healthcare partnerships.
+
+5% Burned Forever: Deflationary mechanism (Tx Proof).
+
+3. How EURC Supports Samar Coin (SMR)
+A. Dual-Token Utility
+Stable Transactions: Donors use EURC to avoid volatility when funding healthcare projects.
+
+Liquidity Mining: Earn SMR rewards by staking EURC in pools.
+
+Grant Disbursements: Samar’s mobile clinics receive EURC for predictable budgeting.
+
+B. Key Integrations
+Samar Donation Portal: Convert EURC→SMR with zero fees.
+
+DeFi Partnerships: EURC as collateral for healthcare loans.
+
+Merchant Adoption: Clinics accept EURC for medical supplies.
+
+4. Technical Architecture
+Smart Contract Highlights
+solidity
+ 
+Copy
+ 
+Download
+// EURC Stablecoin (BEP-20)
+
+contract EURC is ERC20, Ownable {
+    uint256 public constant MAX_SUPPLY = 100_000_000_000 * 10**18;
+    
+    constructor() ERC20("EURO COIN", "EURC") {
+        _mint(msg.sender, MAX_SUPPLY);
+    }
+
+    
+// Disable future minting
+
+    function _mint(address, uint256) internal pure override {
+        revert("EURC: Fixed supply");
+    }
+
+    
+// Burn mechanism
+
+    function burn(uint256 amount) public {
+        _burn(msg.sender, amount);
+    }
+}
+Audits: CertiK audit pending (Q3 2024).
+
+5. Roadmap
+Phase	Goal
+Q3 2024	EURC/SMR liquidity pool launch (500K TVL target)
+Q4 2024	Integrate with 5 healthcare NGOs for EURC payouts
+2025	Expand to Ethereum (Cross-chain bridges)
+6. Why Invest in EURC?
+Stability: Hedge against crypto volatility while supporting Samar’s mission.
+
+Impact: Every EURC transaction indirectly funds healthcare initiatives.
+
+Growth: As Samar expands, EURC becomes the ecosystem’s reserve currency.
+
+7. Conclusion
+EURO COIN is more than a stablecoin—it’s the financial pillar of Samar Coin’s humanitarian vision. By combining price stability with blockchain transparency, EURC empowers donors, healthcare providers, and underserved communities to build a healthier future.
+
+Join the Movement:
+
+Trade EURC on 
+
+Track Impact: 
+
+Disclaimer: EURC is a utility token, not a regulated financial instrument. Always DYOR.
